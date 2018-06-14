@@ -1,158 +1,32 @@
-    function CreateNewElement(elId,typeElement,atr1,typeAtr1,atr2,typeAtr2,content)
+    const CreateNewElement =(elId,typeElement,atr1,typeAtr1,atr2,typeAtr2,content)=>
     {
-        if(typeElement == "div")
-        {
             let ElementTest=elId;
             ElementTest=document.createElement(typeElement);
             ElementTest.id="id_"+elId;
-            if (atr1 != null){
+            if (atr1 != null) 
                 ElementTest.setAttribute(atr1,typeAtr1);
-            }
-                if(content != null)
-                {
-                    ElementTest.textContent=content;
-                }
-                    return ElementTest;
-        }
-        else if(typeElement == "button")
-        {
-            let ElementTest=elId;
-            ElementTest=document.createElement(typeElement);
-            ElementTest.id="id_"+elId;
-            if (atr1 != null){
-                ElementTest.setAttribute(atr1,typeAtr1);
-            }
-                if (atr2  != null){
+                if (atr2  != null) 
                     ElementTest.setAttribute(atr2,typeAtr2);
-                }
-                    if(content != null)
-                    {
-                        ElementTest.textContent=content;
-                    }
-                    return ElementTest;
-        }
-        else if(typeElement == "br")
-        {
-            let ElementTest=elId;
-            ElementTest=document.createElement(typeElement);
-            return ElementTest;
-        }
-        else if(typeElement == "span")
-        {
-            let ElementTest=elId;
-            ElementTest=document.createElement(typeElement);
-            ElementTest.id="id_"+elId;
-            if (atr1 != null){
-                ElementTest.setAttribute(atr1,typeAtr1);
-            }
-                if(content != null)
-                {
-                    ElementTest.textContent=content;
-                }
-                    return ElementTest;
-        }
-        else if(typeElement == "span")
-        {
-            let ElementTest=elId;
-            ElementTest=document.createElement(typeElement);
-            ElementTest.id="id_"+elId;
-            if (atr1 != null){
-                ElementTest.setAttribute(atr1,typeAtr1);
-            }
-                if(content != null)
-                {
-                    ElementTest.textContent=content;
-                }
-                    return ElementTest;
-        }
-
-        else if(typeElement == "input")
-        {
-            let ElementTest=elId;
-            ElementTest=document.createElement(typeElement);
-            ElementTest.id="id_"+elId;
-            if (atr1 != null){
-                ElementTest.setAttribute(atr1,typeAtr1);
-            }
-                    return ElementTest;
-        }
-
-        else if(typeElement == "label")
-        {
-            let ElementTest=elId;
-            ElementTest=document.createElement(typeElement);
-            ElementTest.id="id_"+elId;
-                if(content != null)
-                {
-                    ElementTest.textContent=content;
-                }
-                    return ElementTest;
-        }
-
-        else if(typeElement == "h1" || typeElement == "h2" || typeElement == "h3" || typeElement == "h4" || typeElement == "h5" || typeElement == "h6" )
-        {
-            let ElementTest=elId;
-            ElementTest=document.createElement(typeElement);
-            ElementTest.id="id_"+elId;
-            if(content != null){
-                ElementTest.textContent=content;
-            }
-            return ElementTest;
-        }
-
-        else if(typeElement == "table")
-        {
-            let ElementTest=elId;
-            ElementTest=document.createElement(typeElement);
-            ElementTest.id="id_"+elId;
-            return ElementTest;
-        }
-        else if(typeElement == "tbody")
-        {
-            let ElementTest=elId;
-            ElementTest=document.createElement(typeElement);
-            ElementTest.id="id_"+elId;
-            return ElementTest;
-        }
-        else if(typeElement == "tr")
-        {
-            let ElementTest=elId;
-            ElementTest=document.createElement(typeElement);
-            ElementTest.id="id_"+elId;
-            return ElementTest;
-        }
-        else if(typeElement == "td")
-        {
-            let ElementTest=elId;
-            ElementTest=document.createElement(typeElement);
-            ElementTest.id="id_"+elId;
-            return ElementTest;
-        }
-
+                        if(content != null)
+                            ElementTest.textContent=content;
+    return ElementTest;
     }
-    let div="div";
-    let clas="class";
-    let span="span";
-    let table="table";
-    let tbody="tbody";
-    let button="button";
-    let label="label";
-    let input="input";
-    let h1="h1";
-    let h2="h2";
-    let h3="h3";
-    let h4="h4";
-    let h5="h5";
-    let h6="h6";
-    let test;
-
-
-    //asfasdasd
-
-    //asd
-
- function startJavaScript()
- {
+        let div="div";
+        let clas="class";
+        let span="span";
+        let table="table";
+        let tbody="tbody";
+        let button="button";
+        let label="label";
+        let input="input";
+        let h1="h1";
+        let h2="h2";
+        let h3="h3";
+        let h4="h4";
+        let h5="h5";
+        let h6="h6";
+    const startJavaScript=()=>
+    {
     //Log In Form Start's here------------------------------------------------->
     //Log In Form Start's here------------------------------------------------->
     document.body.appendChild(CreateNewElement("div_Class_Content",div,clas,"content"));
@@ -244,16 +118,17 @@
     //Modal Box Register Form End's hete -------------------------------------->
     //Modal Box Register Form End's hete -------------------------------------->
 }
-    function showLogInIngo(){
-    let uname = document.getElementById('id_input_User_name_Log').value; 
-    let pass = document.getElementById('id_input_Password_Log').value; 
-    alert
-    (
-        "UserName :" + uname  +"\n"+
-        "Password :" + pass  +"\n" 
-    );
-}
-    function ValidateEmail() 
+    const showLogInIngo =()=>{
+        let uname = document.getElementById('id_input_User_name_Log').value; 
+        let pass = document.getElementById('id_input_Password_Log').value; 
+        alert
+        (
+            "UserName :" + uname  +"\n"+
+            "Password :" + pass  +"\n" 
+        );
+    }
+
+    const ValidateEmail=()=> ValidateEmail 
     {
     let email = document.getElementById('id_input_Email_Reg').value;
      if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
@@ -275,54 +150,51 @@
         alert("You have entered an invalid email address!")
         return (false);
       }
-       
     }
 
-function openModalLogInBox()
-{
-    // Get the modal
-    var modalLogIn = document.getElementById('id_div_Class_Modal_LogIn');
-    // Get the button that show's username and password
-    var btnModal = document.getElementById("id_btn_LogIn_ModalBox")
-    // Get the <span> element that closes the modal
-    var span = document.getElementById("id_span_LogIn_Class_CloseLog");
-    // When the user clicks the button, open the modal 
-        modalLogIn.style.display = "block";
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() 
+    const openModalLogInBox=()=>
     {
-        modalLogIn.style.display = "none";
-    }
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) 
-    {
-        if (event.target == modalLogIn) {
+        // Get the modal
+        var modalLogIn = document.getElementById('id_div_Class_Modal_LogIn');
+        // Get the button that show's username and password
+        var btnModal = document.getElementById("id_btn_LogIn_ModalBox")
+        // Get the <span> element that closes the modal
+        var span = document.getElementById("id_span_LogIn_Class_CloseLog");
+        // When the user clicks the button, open the modal 
+            modalLogIn.style.display = "block";
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() 
+        {
             modalLogIn.style.display = "none";
         }
-    }
-}
-function openModalRegisterBox()
-{
-    // Get the modal
-    var modalRegister = document.getElementById('id_div_Class_Modal_Reg');
-    // Get the button that opens the modal
-    var btnModal = document.getElementById("idBtnReg")
-    // Get the <span> element that closes the modal
-    var span = document.getElementById("id_span_Reg");
-    // When the user clicks the button, open the modal 
-
-        modalRegister.style.display = "block";
-    
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() 
-    {
-        modalRegister.style.display = "none";
-    }
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) 
-    {
-        if (event.target == modalRegister) {
-            modalRegister.style.display = "none";
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) 
+        {
+            if (event.target == modalLogIn) {
+                modalLogIn.style.display = "none";
+            }
         }
     }
-}
+    const openModalRegisterBox=()=>
+    {
+        // Get the modal
+        var modalRegister = document.getElementById('id_div_Class_Modal_Reg');
+        // Get the button that opens the modal
+        var btnModal = document.getElementById("idBtnReg")
+        // Get the <span> element that closes the modal
+        var span = document.getElementById("id_span_Reg");
+        // When the user clicks the button, open the modal 
+            modalRegister.style.display = "block";
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() 
+        {
+            modalRegister.style.display = "none";
+        }
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) 
+        {
+            if (event.target == modalRegister) {
+                modalRegister.style.display = "none";
+            }
+        }
+    }
