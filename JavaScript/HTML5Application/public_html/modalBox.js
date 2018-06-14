@@ -142,6 +142,7 @@
     let h2="h2";
     let h3="h3";
     let h4="h4";
+    let h5="h5";
  function startJavaScript()
  {
     //Log In Form Start's here------------------------------------------------->
