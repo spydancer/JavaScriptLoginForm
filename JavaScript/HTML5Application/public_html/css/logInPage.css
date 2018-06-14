@@ -1,0 +1,144 @@
+.content{
+padding-top: 80px;
+width:1100px;
+margin: 0 auto;
+}
+
+.form_login {
+background-image: url("LogInBackground.jpg");
+width: 50px;
+padding-left: 10px;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-right: 10px; 
+width: auto;
+border-bottom-left-radius: 40px;
+border-top-right-radius: 40px;
+border-style: groove;
+border-color: black;
+  }
+  
+#theLogInBtn, #theRegistrationBtn, #myBtn{
+margin-left: 40%;
+width: 200px;
+height: 30px;
+}
+
+
+
+#id_h2_Log_In_Center,#id_h5_Forget_password{
+    text-align: center;
+}
+#id_h5_Forget_password{
+    text-align: right;
+}
+.oval_button {
+    background: #fefefe;
+    width: 200px;
+    padding: 10px;
+    margin:  5px 5px 5px 40%;
+    border-bottom-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+
+
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("\\LogInBackground.jpg");
+}
+
+/* The Modal (background) */
+.modalLog,.modalReg {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+ 
+
+
+
+
+.modalBoxBtnStyle{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  margin-top:5%; 
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 20%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.9s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:7}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:8}
+}
+
+/* The Close Button */
+.closeReg,.closeLog {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.closeLog:hover,.closeReg:hover,.closeLog:focus,.closeReg:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.modal-body {
+    position: relative;
+    padding: 20px 20px 20px 20px;
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+

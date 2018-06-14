@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome to Log In</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/logInPage.css">
+        
+    </head>
+    <body background="LogInBackground.pg" onload="startJavaScript()" >
+       
+      <div  id="content" class="content">
+            <div id="borderClass"  class="border">
+                <div id="logInDiv" class="form_login" >
+                    <button class="oval_button" id="theLogInBtn"        onclick="openModalLogIn()"    value="logIn"   >Log in</button>
+                    <button class="oval_button" id="theRegistrationBtn" onclick="openModalRegister()" value="Register">Registration</button>
+                </div>
+            </div>
+        </div>
+       <!--             Modal Box Log in Start            -->
+        <div id="myModalLogIn" class="modalLog">
+          <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                  <span class="closeLog">&times;</span>
+                  <h2 id="h2LogInCenter">Log In</h2>
+                  
+                </div>
+                <div class="modal-body">
+                    <label>UserName</label>
+                    <input type="text">
+                    <br>
+                    <label>Password</label>
+                    <input type="password">
+                    <br>
+                    <button class="oval_button" >Log me In</button>
+                </div>
+                <div class="modal-footer">
+                  <h3 id="h3ForgetPassword">Forget Password</h3>
+                </div>
+            </div>
+        </div>
+        <!--              Modal Box Log in End                 -->
+        <!--              Modal Box Register Start             -->
+        <div id="myModalRegister" class="modalReg">
+          <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                  <span class="closeReg">&times;</span>
+                  <h2 id="h2LogInCenter">Register</h2>
+                  
+                </div>
+                <div class="modal-body">
+                    <label>UserName</label>
+                    <input type="text">
+                    <br>
+                    <label>Password</label>
+                    <input type="password">
+                    <br>
+                    <label>Re-type Password</label>
+                    <input type="password">
+                    <br>
+                    <button class="oval_button" >Log me In</button>
+                </div>
+                <div class="modal-footer">
+                  <h3 id="h3ForgetPassword">Forget Password</h3>
+                </div>
+            </div>
+        </div>
+        <!--              Modal Box Register End               -->
+        
+		<script>
+		 let btn = document.createElement("BUTTON");
+    let t = document.createTextNode("Log me In!");
+    let textArea1=document.createElement("INPUT");           
+    let textArea2=document.createElement("INPUT");
+    let label1 = document.createElement("LABEL");
+    let label2 = document.createElement("LABEL");
+    let textUser = document.createTextNode("UserName");
+    let textPas = document.createTextNode("Password");
+    let br = document.createElement("br");
+    let br2 = document.createElement("br");
+    btn.setAttribute("id","loginbtn");
+    btn.setAttribute("onclick","displayInfo()");
+    btn.setAttribute("style","display: block");
+    textArea1.setAttribute("id","username");
+    textArea2.setAttribute("id","password");
+    textArea2.setAttribute("type","password");
+    label1.setAttribute("id","label1Id");
+    label1.appendChild(textUser);
+    label2.appendChild(textPas);
+    btn.appendChild(t);
+    document.getElementById("loginbtn").onclick=displayInfo;
+    function MyLogIn(){
+        document.getElementById("theLogInBtn").style.display="none";
+        document.getElementById("theRegistrationBtn").style.display="none";
+        document.getElementById("borderClass").style.borderStyle="none";
+        document.getElementById("logInDiv").style.borderStyle="none";
+        document.body.appendChild(label1);
+        document.body.appendChild(textArea1);
+        document.body.appendChild(br);
+        document.body.appendChild(label2);
+        document.body.appendChild(textArea2);
+        document.body.appendChild(br2);
+        document.body.appendChild(btn);
+        return;
+        }
+    function displayInfo()  
+        {
+         let name = document.getElementById('username').value; 
+         let pass = document.getElementById('password').value; 
+         if (name == "" && pass == "") {
+               alert("The fields are Empty !")
+         }else if (name != "" && pass == "") {
+               alert("No PassWord");
+         }else if (name == "" && pass != "") {
+               alert("No UserName");
+         }else if (name != "" && pass != ""){
+               alert("User Name :" + name + "\n PassWord :" + pass);
+         }
+		</script>
+		
+		
+    </body>
+</html>
